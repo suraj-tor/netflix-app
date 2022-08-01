@@ -16,16 +16,16 @@ const Netflix = () => {
             <Card
                 key={sdata[1].id}
                 imgsrc={sdata[1].imgsrc}
-                title={sdata[0].title}
-                sname={sdata[0].sname}
-                link={sdata[0].link}
+                title={sdata[1].title}
+                sname={sdata[1].sname}
+                link={sdata[1].link}
             />
             <Card
                 key={sdata[2].id}
                 imgsrc={sdata[2].imgsrc}
-                title={sdata[0].title}
-                sname={sdata[0].sname}
-                link={sdata[0].link}
+                title={sdata[2].title}
+                sname={sdata[2].sname}
+                link={sdata[2].link}
             />
         </>
     );
