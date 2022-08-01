@@ -6,13 +6,27 @@ import sdata from "./sdata";
 
 console.log(sdata);
 
+// function ncard(value) {
+//     console.log(value);
+//     return (
+//         <>
+//             <Card imgsrc={value.imgsrc} title={value.title} sname={value.sname} link={value.link} />
+//         </>
+//     );
+// }
+// or we can use fat arrow functions
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <>
         <h1 className="heading_stryle">List of top 5 Netflix Series in 2022</h1>
-        <Card imgsrc={sdata[0].imgsrc} title={sdata[0].title} sname={sdata[0].sname} link={sdata[0].link} />
-        <Card imgsrc={sdata[1].imgsrc} title={sdata[1].title} sname={sdata[1].sname} link={sdata[1].link} />
-        <Card imgsrc={sdata[2].imgsrc} title={sdata[2].title} sname={sdata[2].sname} link={sdata[2].link} />
+        {sdata.map((value) => {
+            return (
+                <>
+                    <Card imgsrc={value.imgsrc} title={value.title} sname={value.sname} link={value.link} />
+                </>
+            );
+        })}
     </>
 );
 
