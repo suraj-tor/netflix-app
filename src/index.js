@@ -1,36 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Card from "./Card";
+import App from "./App";
 import "./index.css";
-import sdata from "./sdata";
-
-console.log(sdata);
-
-// function ncard(value) {
-//     console.log(value);
-//     return (
-//         <>
-//             <Card imgsrc={value.imgsrc} title={value.title} sname={value.sname} link={value.link} />
-//         </>
-//     );
-// }
-// or we can use fat arrow functions
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-    <>
-        <h1 className="heading_stryle">List of top 5 Netflix Series in 2022</h1>
-        {sdata.map((value) => {
-            return (
-                <>
-                    <Card imgsrc={value.imgsrc} title={value.title} sname={value.sname} link={value.link} />
-                </>
-            );
-        })}
-    </>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
+root.render(<App />);

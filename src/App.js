@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Amazon from "./Amazon";
+// import Card from "./Card";
+// import sdata from "./sdata";
+import "./index.css";
+import Netflix from "./Netflix";
+
+const favourites = "Netflix";
+
+const FavS = () => {
+    return favourites === "Netflix" ? <Netflix /> : <Amazon />;
+};
+
+// const cards = sdata.map((value) => {
+//     return <Card key={value.id} imgsrc={value.imgsrc} title={value.title} sname={value.sname} link={value.link} />;
+// });
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <h1 className="heading_stryle">List of top 5 Netflix Series in 2022</h1>
+            <FavS />
+        </>
+    );
 }
-
 export default App;
